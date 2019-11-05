@@ -25,7 +25,7 @@ export default class postAnswer extends Component {
             <div className="card">
                 <div className="card-body">
                     <form>
-                        <div className="form-group">
+                        <div className="form-group" style={{ marginBottom: '10px' }}>
                             <label htmlFor="itemText">Leave an answer:</label><br/>
                             <input type="text" className="form-control" id="itemText"
                                    onChange={(event) => this.handleChange(event)}
@@ -33,7 +33,6 @@ export default class postAnswer extends Component {
                             <small className="form-text text-muted">
                             </small>
                         </div>
-                        <br/>
                         <button onClick={(event) => this.handleButtonClick(event)}
                                 type="submit" id="submitItemBtn" className="btn btn-primary">Confirm
                         </button>
