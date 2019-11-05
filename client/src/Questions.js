@@ -7,7 +7,9 @@ class Questions extends Component {
     render() {
         return (
             <React.Fragment>
+                <div col-lg-8 p-4>
                 <h1>Questions</h1>
+                </div>
                 <ul>
                     {this.props.questions.map(question =>
                         <li key={question._id}>
