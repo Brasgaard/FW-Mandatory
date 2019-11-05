@@ -25,7 +25,7 @@ export default class askQuestion extends Component {
             <div className="card">
                 <div className="card-body">
                     <form>
-                        <div className="form-group" style={{ textAlign: 'center' }}>
+                        <div className="form-group">
                             <label htmlFor="itemText">Ask question here:</label><br/>
                             <input type="text" className="form-control" id="itemText"
                                    onChange={(event) => this.handleChange(event)}
@@ -33,7 +33,7 @@ export default class askQuestion extends Component {
                             <small className="form-text text-muted">
                             </small>
                         </div>
-                        <div style={{ textAlign: 'center' }}>
+                        <div>
                         <button onClick={(event) => this.handleButtonClick(event)}
                                 type="submit" id="submitItemBtn" className="btn btn-primary">Confirm
                         </button>

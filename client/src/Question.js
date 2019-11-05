@@ -19,7 +19,7 @@ class Question extends Component {
                     <h1>{question.question}</h1>
 
                     <h3>Answers to questions:</h3>
-                    <ol style={{ listStyleType: 'none' }}>
+                    <ol>
                         {question.answers.map((answer,i) => {
                             return ( <li key={i}>
                                 {answer.answer} <br/>Votes: {answer.upVote}
