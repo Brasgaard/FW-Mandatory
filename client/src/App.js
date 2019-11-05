@@ -4,7 +4,7 @@ import Questions from "./Questions";
 import Question from "./Question";
 
 class App extends Component {
-    API_URL = 'https://maureen-qanda-app.herokuapp.com/api';
+    API_URL = 'https://fw-mandatory.herokuapp.com/api';
 
     constructor(props) {
         super(props);
@@ -19,7 +19,7 @@ class App extends Component {
         }
     }
     componentDidMount() {
-        this.getQuestions().then(() => console.log("questions successfully gotten!"));
+        this.getQuestions().then(() => console.log("Success"));
     }
 
     async getQuestions() {
@@ -84,12 +84,10 @@ class App extends Component {
     render() {
         return (
                 <div>
-                    <br/>
                     <Router>
                         <Question path="/question/:id" postAnswerToDB={ this.postAnswerToDB} postUpvoteAnswerToDB={this.postUpvoteAnswerToDB} postDownvoteAnswerToDB={this.postDownvoteAnswerToDB} getQuestion={id=> this.getQuestion(id)} />
                         <Questions path="/" postQuestionToDB={this.postQuestionToDB} questions={this.state.questions}/>
                     </Router>
-                    <br/>
                 </div>
         );
     }

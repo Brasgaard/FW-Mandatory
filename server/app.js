@@ -56,12 +56,11 @@ app.get('*', (req, res) =>
 );
 
 /**** Start ****/
-const url = ( 'mongodb+srv://maureenkoopman:Development1!@cluster0-pyjf5.mongodb.net/test?retryWrites=true&w=majority' );
+const url = ( 'mongodb+srv://Brasgaard:Okerpre36@mandatory-qsg2h.mongodb.net/test?retryWrites=true&w=majority' );
 mongoose.connect(url, {useNewUrlParser: true}).then(async () => {
     await app.listen(port); // Start the API
-    console.log(`Kitten API running on port ${port}!`)
+    console.log(`The API is running on: ${port}!`)
 })
     .catch(error => console.error(error));;
-
 
 

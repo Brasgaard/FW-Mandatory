@@ -8,12 +8,12 @@ class Questions extends Component {
         return (
             <React.Fragment>
                 <h1>Questions</h1>
-                <ol>
+                <ul>
                     {this.props.questions.map(question =>
                         <li key={question._id}>
-                            <Link to={`/question/${question._id}`}>{question.question} - answers: {question.answers.length}</Link>
+                            <Link to={`/question/${question._id}`}>{question.question}</Link>
                         </li>)}
-                </ol>
+                </ul>
                 <AskQuestion postQuestionToDB={this.props.postQuestionToDB}/>
             </React.Fragment>
         );

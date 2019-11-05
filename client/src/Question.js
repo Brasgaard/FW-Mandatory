@@ -11,25 +11,25 @@ class Question extends Component {
     render() {
         const question = this.props.getQuestion(this.props.id);
         this.state.question = question;
-        let content = <p>Loading</p>;
+        let content = <p>Please wait</p>;
 
         if (question) {
             content =
                 <React.Fragment>
                     <h1>{question.question}</h1>
 
-                    <h3>Answers</h3>
-                    <ul>
+                    <h3>Answers to questions:</h3>
+                    <ol>
                         {question.answers.map((answer,i) => {
                             return ( <li key={i}>
-                                {answer.answer} - number of up votes: {answer.upVote}
-                                <button onClick={() => this.props.postUpvoteAnswerToDB(question._id, answer._id)}>upvote</button>
-                                <button onClick={() => this.props.postDownvoteAnswerToDB(question._id, answer._id)}>downvote</button>
+                                {answer.answer} | Votes {answer.upVote}
+                                <button onClick={() => this.props.postUpvoteAnswerToDB(question._id, answer._id)}>Upvote</button>
+                                <button onClick={() => this.props.postDownvoteAnswerToDB(question._id, answer._id)}>Downvote</button>
                             </li>)
                         })}
-                    </ul>
+                    </ol>
 
-                    <Link to="/">Back</Link>
+                    <Link to="/">Go back to questions</Link>
                     <PostAnswer postAnswerToDB = { this.props.postAnswerToDB } getQuestion={id => this.props.getQuestion(id)} questionID = { question._id }/>
                 </React.Fragment>
         }

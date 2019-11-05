@@ -26,16 +26,15 @@ export default class postAnswer extends Component {
                 <div className="card-body">
                     <form>
                         <div className="form-group">
-                            <label htmlFor="itemText">Answer:</label>
+                            <label htmlFor="itemText">Leave an answer:</label>
                             <input type="text" className="form-control" id="itemText"
-                                   placeholder="Type answer here"
                                    onChange={(event) => this.handleChange(event)}
                             />
                             <small className="form-text text-muted">
                             </small>
                         </div>
                         <button onClick={(event) => this.handleButtonClick(event)}
-                                type="submit" id="submitItemBtn" className="btn btn-primary">Add Answer
+                                type="submit" id="submitItemBtn" className="btn btn-primary">Confirm
                         </button>
                     </form>
                 </div>
