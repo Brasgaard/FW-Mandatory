@@ -33,9 +33,11 @@ export default class askQuestion extends Component {
                             <small className="form-text text-muted">
                             </small>
                         </div>
+                        <div style={{ textAlign: 'center' }}>
                         <button onClick={(event) => this.handleButtonClick(event)}
                                 type="submit" id="submitItemBtn" className="btn btn-primary">Confirm
                         </button>
+                        </div>
                     </form>
                 </div>
             </div>
