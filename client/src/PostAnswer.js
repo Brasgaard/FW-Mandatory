@@ -26,7 +26,7 @@ export default class postAnswer extends Component {
                 <div className="card-body">
                     <form>
                         <div className="form-group">
-                            <label htmlFor="itemText">Leave an answer:</label>
+                            <label htmlFor="itemText">Leave an answer:</label><br/>
                             <input type="text" className="form-control" id="itemText"
                                    onChange={(event) => this.handleChange(event)}
                             />

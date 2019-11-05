@@ -26,7 +26,7 @@ export default class askQuestion extends Component {
                 <div className="card-body">
                     <form>
                         <div className="form-group">
-                            <label htmlFor="itemText">Ask question here:</label>
+                            <label htmlFor="itemText">Ask question here:</label><br/>
                             <input type="text" className="form-control" id="itemText"
                                    onChange={(event) => this.handleChange(event)}
                             />
