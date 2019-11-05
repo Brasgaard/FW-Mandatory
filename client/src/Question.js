@@ -22,9 +22,8 @@ class Question extends Component {
                     <ol>
                         {question.answers.map((answer,i) => {
                             return ( <li key={i}>
-                                {answer.answer} <br/>Votes: {answer.upVote}
+                                {answer.answer} <br/>Votes: {answer.upVote} &nbsp;
                                 <button onClick={() => this.props.postUpvoteAnswerToDB(question._id, answer._id)}>&#8593;</button>
-                                or
                                 <button onClick={() => this.props.postDownvoteAnswerToDB(question._id, answer._id)}>&#8595;</button>
                             <br/><br/></li>)
                         })}
