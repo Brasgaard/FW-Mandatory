@@ -25,7 +25,7 @@ export default class askQuestion extends Component {
             <div className="card">
                 <div className="card-body">
                     <form>
-                        <div className="form-group">
+                        <div className="form-group" style={{ textAlign: 'center' }}>
                             <label htmlFor="itemText">Ask question here:</label><br/>
                             <input type="text" className="form-control" id="itemText"
                                    onChange={(event) => this.handleChange(event)}

@@ -8,7 +8,7 @@ class Questions extends Component {
         return (
             <React.Fragment>
                 <h1 style={{ textAlign: 'center' }}>Questions</h1>
-                <ul>
+                <ul style={{ textAlign: 'center' }}>
                     {this.props.questions.map(question =>
                         <li key={question._id}>
                             <Link to={`/question/${question._id}`}>{question.question}</Link>
