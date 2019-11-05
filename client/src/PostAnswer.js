@@ -33,6 +33,7 @@ export default class postAnswer extends Component {
                             <small className="form-text text-muted">
                             </small>
                         </div>
+                        <br/>
                         <button onClick={(event) => this.handleButtonClick(event)}
                                 type="submit" id="submitItemBtn" className="btn btn-primary">Confirm
                         </button>
