@@ -29,7 +29,7 @@ class Question extends Component {
                         })}
                     </ol>
 
-                    <Link to="/">Go back to questions</Link><br/><br/>
+                    <Link to="/">&#8592; Go back to questions</Link><br/><br/>
                     <PostAnswer postAnswerToDB = { this.props.postAnswerToDB } getQuestion={id => this.props.getQuestion(id)} questionID = { question._id }/>
                 </React.Fragment>
         }
