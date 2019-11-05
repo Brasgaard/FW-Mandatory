@@ -22,7 +22,7 @@ class Question extends Component {
                     <ol>
                         {question.answers.map((answer,i) => {
                             return ( <li key={i}>
-                                {answer.answer} <br/>Votes {answer.upVote}
+                                {answer.answer} <br/>Votes: {answer.upVote}
                                 <button onClick={() => this.props.postUpvoteAnswerToDB(question._id, answer._id)}>Upvote</button>
                                 or
                                 <button onClick={() => this.props.postDownvoteAnswerToDB(question._id, answer._id)}>Downvote</button>
@@ -30,7 +30,7 @@ class Question extends Component {
                         })}
                     </ol>
 
-                    <Link to="/">Go back to questions</Link><br/>
+                    <Link to="/">Go back to questions</Link><br/><br/>
                     <PostAnswer postAnswerToDB = { this.props.postAnswerToDB } getQuestion={id => this.props.getQuestion(id)} questionID = { question._id }/>
                 </React.Fragment>
         }
